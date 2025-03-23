@@ -1,6 +1,6 @@
 #pragma once
-
-
+#define _USE_MATH_DEFINES
+#include <cmath>
 #include <iostream>
 
 
@@ -218,9 +218,9 @@ inline TComplex<T>::TComplex(T re_, T im_)
 	template<class T>
 	inline void TComplex<T>::PrintTrigonometricForm() const
 	{
-		T r = Magnitude();  // Модуль
-		T theta = Argument();  // Аргумент (в радианах)
-		T theta_degrees = theta * 180 / M_PI;  // Аргумент в градусах
+		T r = Magnitude();  // ГЊГ®Г¤ГіГ«Гј
+		T theta = Argument();  // ГЂГ°ГЈГіГ¬ГҐГ­ГІ (Гў Г°Г Г¤ГЁГ Г­Г Гµ)
+		T theta_degrees = theta * 180 / M_PI;  // ГЂГ°ГЈГіГ¬ГҐГ­ГІ Гў ГЈГ°Г Г¤ГіГ±Г Гµ
 
 		std::cout << r << " * (cos(" << theta_degrees << ") + i*sin(" << theta_degrees << "))" << std::endl;
 	}
