@@ -44,11 +44,11 @@ public:
 
 	void PrintTrigonometricForm() const;
 
-	template <class T>
-	friend std::ostream& operator <<(std::ostream& o, TComplex<T>& b);
+	template <class U>
+	friend std::ostream& operator <<(std::ostream& o, TComplex<U>& b);
 
-	template <class T>
-	friend std::istream& operator>>(std::istream& i, TComplex<T>& b);
+	template <class U>
+	friend std::istream& operator>>(std::istream& i, TComplex<U>& b);
 };
 template<class T>
 inline TComplex<T>::TComplex(T re_, T im_)
